@@ -2,11 +2,13 @@
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 
-Repositório da disciplina IED001A Estruturas de Dados. FATEC São Paulo.
+Repositório da disciplina IED001A Estruturas de Dados. FATEC São Paulo. 02/2023
 
 Disciplina ministrada usando a linguagem C.
 
-Professor: [MARCELO DUDUCHI FEITOSA](.)
+Professor: [Silvio do Lago Pereira, D.Sc.](https://www.ime.usp.br/~slago/)
+
+Material utilizado nas aulas: [Material](https://www.ime.usp.br/~slago/main.fatecsp.ed.html)
 
 ## Index
 
@@ -44,15 +46,32 @@ gcc test.c -o saida
 Saida do programa:
 
 ```text
-hello world
+Hello World!
 ```
 
 ## Conteúdo
 
 ### Aulas
 
-- [Aula 01](---)
+- [Aula 01: Introdução: abstração, estruturas de dados e linguagem C](01-introducao)
+- [Aula 02: Pilhas: fundamentos,operações e implementação](02-pilhas)
+- [Aula 03: Expressões: fundamentos, conversão e avaliação](03-expressoes)
+- [Aula 04: Filas: fundamentos,operações e implementação](04-filas)
+- [Aula 05: Extraclasse - Coloração: representação, exibição e coloração de imagem](05-extraclasse-coloracao)
+- [P1](provas/p1/)
+- [Aula 06: Recursão: funções recursivas](06-recursao)
+- [Aula 07: Extraclasse - Ordenação e busca: fundamentos e algoritmos](07-ordenacao-busca)
+- [Aula 08: Listas encadeadas: fundamentos e operações](08-lista-encadeada)
+- [Aula 09: Listas ordenadas: fundamentos e operações](09-lista-ordenada)
+- [P2](provas/p2/)
+- [Aula 10: Mapeamentos: fundamentos e implementação](10-mapeamento)
+- [Aula 11: Dicionários: fundamentos e implementação](11-dicionario)
+- [Aula 12: Árvores binárias: fundamentos e implementação recursiva](12-arvore-binaria)
+- [Aula 13: Árvores de busca binária: fundamentos e implementação recursiva](13-arvore-busca-binaria)
+- [P3](provas/p3/)
 
 ## Links Didáticos
 
-[-](.)
+[Beecrowd: Estruturas e Bibliotecas](https://www.beecrowd.com.br/judge/pt/problems/index/4)
+[Leetcode: Problems](https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiREVTQ0VORElORyIsIm9yZGVyQnkiOiJBQ19SQVRFIn1d)
+[Data Structure Visualizations - University of San Francisco](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
