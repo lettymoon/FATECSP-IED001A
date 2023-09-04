@@ -1,9 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
+#include <wchar.h>
+#include <wctype.h>
+
+//Problema da acentuação resolvido
 
 // Estrutura da pilha
-typedef char Itemp;
+typedef wchar_t Itemp;
 typedef struct pilha{
     int max;
     int topo;
@@ -69,23 +73,24 @@ void Pdestroi(Pilha *P){
 }
 
 // função que verifica tamanho da frase string
-int len(char frase[]){
+int len(wchar_t frase[]){
 
     int i = 0;
-    while (frase[i] != '\0')
+    while (frase[i] != L'\0')
         i++;
 
     return i;
 }
+
 // função que inverte as palavras das frases
-void inverterFrase(char frase[]){
-    printf("%s", frase);
+void inverterFrase(wchar_t frase[]){
+    wprintf(L"%ls", frase);
     Pilha pilhaUnica = pilha(500);
     int lenFrase = len(frase);
 
     for (int i = 0; i < lenFrase; i++)
     {
-        if (frase[i] != ' ' && frase[i] != '\n')
+        if (frase[i] != L' ' && frase[i] != L'\n')
         {
             empilha(frase[i], pilhaUnica);
         }
@@ -93,17 +98,17 @@ void inverterFrase(char frase[]){
         {
             while (!Pvazia(pilhaUnica))
             {
-                char letra = topo(pilhaUnica);
+                Itemp letra = topo(pilhaUnica);
                 desempilha(pilhaUnica);
-                printf("%c", letra);
+                wprintf(L"%lc", letra);
             }
-            printf(" ");
+            wprintf(L" ");
         }
     }
 }
 
 // função que verifica se é palíndromo
-int isPalindromeOtimizado(char frase[]){
+int isPalindromeOtimizado(wchar_t frase[]){
 
     int tamanhoFrase = len(frase);
     int meioFrase = tamanhoFrase / 2;
@@ -133,12 +138,12 @@ int isPalindromeOtimizado(char frase[]){
 
 int main(void){
 
-    setlocale(LC_ALL, "en_US.utf8");
+    setlocale(LC_ALL,"");
 
-    char frase[500];
-    fgets(frase, 500, stdin);
+    wchar_t frase[500];
+    fgetws(frase, 500, stdin);
 
-    printf("%d\n", isPalindromeOtimizado(frase));
+    wprintf(L"%d\n", isPalindromeOtimizado(frase));
     inverterFrase(frase);
 
     return 0;
