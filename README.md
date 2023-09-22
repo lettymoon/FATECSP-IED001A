@@ -6,7 +6,7 @@ Repositório da disciplina IED001A Estruturas de Dados. FATEC São Paulo. 02/202
 
 Disciplina ministrada usando a linguagem C.
 
-Professor: [Silvio do Lago Pereira, D.Sc.](https://www.ime.usp.br/~slago/)
+Professor: Luiz Tsutomu Akamine (DTI-FATECSP)
 
 Material utilizado nas aulas: [Material](https://www.ime.usp.br/~slago/main.fatecsp.ed.html)
 
