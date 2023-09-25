@@ -72,3 +72,4 @@ Hello World!
 - [Beecrowd: Estruturas e Bibliotecas](https://www.beecrowd.com.br/judge/pt/problems/index/4)
 - [Leetcode: Problems](https://leetcode.com/problemset/all/?sorting=W3sic29ydE9yZGVyIjoiREVTQ0VORElORyIsIm9yZGVyQnkiOiJBQ19SQVRFIn1d)
 - [Data Structure Visualizations - University of San Francisco](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
+- [HackerRank - Data Structures](https://www.hackerrank.com/domains/data-structures)
