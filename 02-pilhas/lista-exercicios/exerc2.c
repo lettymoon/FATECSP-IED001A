@@ -53,17 +53,14 @@ int main(void){
     printf("Sequência ordenada: ");
     int firstNum = 1;
 
-    while (!isEmpty(&pilhaA)) {
+    while (!isEmpty(&pilhaA)){
         int Num = pop(&pilhaA);
-        
-        if (!firstNum) {
+        if (!firstNum)
             printf(" - ");
-        } else {
+        else
             firstNum = 0;
-        }
         
         printf("%d", Num);
-
     }
     printf("\n");
 

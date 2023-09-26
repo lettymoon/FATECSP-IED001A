@@ -1,56 +1,54 @@
-/*Exercício 01 - Pilhas
+/* Exercício - Ordenação crescente.
 
-Usando uma pilha, crie um programa que lê um número inteiro positivo n (em base 10) e uma base b entre 2 e 36 e,
-em seguida, exibe o número n na base b. Use as letras de A a Z para representar números em bases entre 11 e 36.
-*/
+Crie um programa que usa duas pilhas A e B para ordenar uma sequência de n números dados pelo usuário. A idia é organizar a pilha A de modo que 
+nenhum item seja empilhado sobre outro menor (use a pilha B apenas para manobrar) e, depois, descarregar e exibir os itens da pilha A.*/
 
 #include <stdio.h>
 #include "pilha.h"
 
-void converterParaBase(int n, int b) {
-    Stack pilha;
-    create(&pilha);
-
-    char digitos[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-    while (n > 0) {
-        int resto = n % b;
-        char digito;
-
-        if (resto >= 10){
-            digito = digitos[resto - 10];
-        } 
-        else{
-            digito = '0' + resto;
-        }
-
-        push(digito, &pilha);
-        n /= b;
-    }
-
-    printf("Resultado: ");
-    while (!isEmpty(&pilha)) {
-        printf("%c", pop(&pilha));
-    }
-
-    printf("\n");
-}
-
 int main(void){
 
-    int n;
-    printf("Entre com um número na base 10: ");
-    scanf("%d", &n);
-    int b;
-    printf("Entre com uma base entre 2 e 36: ");
-    scanf("%d", &b);
+    Stack stackA;
+    create(&stackA);
 
-    if(b < 2 && b > 36){
-        printf("Base fora do intervalo.");
-        return 0;
+    Stack stackB;
+    create(&stackB);
+
+    // ordenar na pilha
+    int n=1;
+    printf("Entre com uma lista de números inteiros, digite 0 para parar de listar: ");
+
+     while(1) {
+        scanf("%d", &n);
+
+        if (n == 0)
+            break;
+
+        while (!isEmpty(&stackA) && n > top(&stackA)) {
+            push(top(&stackA), &stackB);
+            pop(&stackA);
+        }
+
+        push(n, &stackA);
+
+        while (!isEmpty(&stackB)) {
+            push(top(&stackB), &stackA);
+            pop(&stackB);
+        }
     }
 
-    converterParaBase(n, b);
+    // imprimir resultado
+    int firstNum = 1;
+    printf("Stack A: ");
+    while(!isEmpty(&stackA)){
+        if (!firstNum)
+            printf(" - ");
+        else
+            firstNum = 0;
+        printf("%d", top(&stackA));
+        pop(&stackA);
+    }
+    printf("\n");
 
     return 0;
 }

@@ -1,5 +1,6 @@
-/* Exercício 03 - Pilhas
-Usando pilha, crie a função inverte(s), que inverte a ordem dos caracteres na cadeia s dada como entrada.
+/* Exercício 03 - Inversão de palavras.
+Usando uma pilha, crie um programa para inverter a ordem das letras de uma frase, sem inverter a ordem das palavras das frases. Por exemplo, se for digitada a 
+frase "apenas um teste", o programa deverá produzir a seguinte saída: sanepa mu etset.
 */
 
 #include <stdio.h>
